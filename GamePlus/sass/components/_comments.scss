@@ -1,0 +1,248 @@
+#comments-section {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    background: $color-background;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(black, .5);
+
+
+    h2 {
+        position: relative;
+        font-size: 1.3em;
+        color: $color-primary;
+        padding-right: 35px;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            bottom: 45%;
+            right: 0;
+            background: $color-primary;
+            border-radius: 50%;
+            box-shadow: 0 0 10px $color-primary;
+        }
+    }
+
+
+    .commentlist {
+        width: 100% !important;
+        margin: 0 !important;
+
+        .children {
+            width: 90%;
+            margin-right: 10%;
+        }
+
+        .comment_container {
+            position: relative;
+            margin-bottom: 10px;
+            border: none !important;
+            padding: 5px;
+            border-radius: 5px;
+            border: none !important;
+            background: lighten($color-background, 5);
+            padding-right: 80px;
+
+            @media (max-width: 700px) {
+                padding-right: 70px;
+            }
+
+            img {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                border-radius: 50%;
+                border: 4px solid $color-primary;
+                box-shadow: 0 0 10px rgba($color-primary, .4);
+
+                @media (max-width: 700px) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .comment-text {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .star-rating {
+                    margin-top: 10px;
+                    order: 2;
+
+                    &::before {
+                        color: $color-primary;
+                    }
+
+                    span {
+                        &::before {
+                            font-family: star;
+                            color: $color-primary;
+                        }
+                    }
+                }
+
+                .meta {
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    order: 1;
+
+                    * {
+                        display: inline-block;
+                        font-style: normal;
+                    }
+
+                    strong {
+                        color: $color-primary;
+                        text-transform: uppercase;
+
+                        @media (max-width: 700px) {
+                            font-size: .9em;
+                        }
+                    }
+
+                    .woocommerce-review__verified {
+                        float: left;
+                        margin-right: 5px;
+                        font-size: .8em;
+                        color: $color-primary;
+
+                        @media (max-width: 700px) {
+                            font-size: .7em;
+                        }
+                    }
+
+                    .woocommerce-review__dash {
+                        display: none !important;
+                        visibility: hidden !important;
+                    }
+
+                    time {
+                        //display: block;
+                        font-size: .9em;
+                        margin-right: 20px;
+
+                        @media (max-width: 700px) {
+                            font-size: .8em;
+                        }
+                    }
+                }
+
+
+                .description {
+                    order: 3;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-top: 1px solid $color-background;
+
+                    p {
+                        width: 100%;
+                        text-align: right;
+
+                        @media (max-width: 700px) {
+                            font-size: .9em;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+    #review_form {
+        margin-top: 40px;
+
+        #reply-title {
+            color: $color-primary;
+            font-size: 1.2em;
+        }
+
+        form {
+            .required {
+                color: rgb(255, 0, 76) !important;
+            }
+
+            .comment-notes {
+                font-size: .9em;
+                font-family: Vazir-Thin;
+            }
+
+            .comment-form-rating {
+                .stars a {
+                    color: $color-primary;
+                }
+            }
+
+            textarea,
+            input[type="text"],
+            input[type="email"] {
+                width: 100% !important;
+                background: lighten($color-background, 5);
+                border-radius: 5px;
+                padding: 10px;
+                border: none !important;
+                resize: vertical;
+                outline: none !important;
+            }
+
+            .comment-form-author,
+            .comment-form-email {
+                display: inline-block;
+                width: 49%;
+
+                @media (max-width: 500px) {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .comment-form-email {
+                margin-right: 1%;
+
+                @media (max-width: 700px) {
+                    margin-right: 0;
+                }
+            }
+
+            .form-submit {
+                text-align: right;
+            }
+
+            input[type="submit"] {
+                background: $color-primary;
+                box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+                color: black;
+
+                @media (max-width: 700px) {
+                    width: 100%;
+				}
+				
+				&:hover {
+					background: $color-primary;
+					box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+					color: black;
+				}
+            }
+        }
+    }
+}

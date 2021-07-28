@@ -1,0 +1,61 @@
+/*
+Theme Name: GamePlus
+Description: Gaming Shop Wordpress Theme
+Theme URI: https://shop.artark.ir/product/gameplus-wordpress-theme/
+Author: ArtArk
+Author URI: https://ArtArk.iR
+Version: 1.3.1
+*/
+
+
+// Base //
+@import "base/vals";
+@import "base/base";
+// Base //
+
+// Components //
+@import "components/header";
+@import "components/footer";
+@import "components/slider";
+@import "components/product";
+@import "components/productTypeTwo";
+@import "components/banner";
+@import "components/companies";
+@import "components/comments";
+@import "components/quanity";
+@import "components/filters";
+@import "components/myFilters";
+@import "components/notices";
+@import "components/productTypeThree";
+@import "components/other";
+@import "components/simpleOrderItem";
+@import "components/pagenation";
+@import "components/mobileHeader";
+@import "components/sidenav";
+@import "components/postComments";
+// Components //
+
+//Pages //
+@import "pages/home";
+@import "pages/product";
+@import "pages/cart";
+@import "pages/form";
+@import "pages/search";
+@import "pages/archive";
+@import "pages/contact";
+@import "pages/about";
+@import "pages/login";
+@import "pages/user";
+@import "pages/orders";
+@import "pages/thankyou";
+@import "pages/games";
+@import "pages/address";
+@import "pages/downloads";
+@import "pages/editAccount";
+@import "pages/tickets";
+@import "pages/viewOrder";
+@import "pages/blog";
+@import "pages/blogPost";
+@import "pages/shop";
+@import "pages/woo";
+//Pages //

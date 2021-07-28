@@ -1,0 +1,114 @@
+.woocommerce-order {
+    position: relative;
+    text-align: center;
+    padding: 0 15%;
+
+    @media (max-width: 2000px) {
+        padding: 0 10%;
+    }
+
+    @media (max-width: 900px) {
+        padding: 0 3%;
+    }
+
+    .successful {
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        p {
+            color: $color-primary;
+        }
+
+    }
+
+    ul.order_details {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $color-background;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(black, .5);
+
+        li {
+            text-align: center;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            color: $color-primary;
+
+            strong {
+                margin-top: 5px;
+                font-family: Vazir;
+                font-weight: normal;
+                color: white;
+            }
+        }
+    }
+
+
+
+
+
+
+    .order-detail-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+
+
+
+
+
+        .a-order-details {
+            width: 49%;
+            background: lighten($color-background, 5);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(black, .5);
+
+            h2 {
+                color: $color-primary;
+            }
+
+            a {
+                color: white;
+            }
+
+            table {
+
+                td,
+                th {
+                    font-family: Vazir-Bold;
+                }
+            }
+        }
+
+
+        .a-customer-details {
+            width: 49%;
+            background: lighten($color-background, 5);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(black, .5);
+
+            h2 {
+                color: $color-primary;
+            }
+
+            address {
+                margin-top: 5px;
+                font-style: normal !important;
+                color: white;
+            }
+        }
+
+
+    }
+}

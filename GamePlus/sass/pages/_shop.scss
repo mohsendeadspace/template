@@ -1,0 +1,210 @@
+#suggested-products-shop-page {
+    margin-top: 80px;
+    width: 100%;
+
+
+    .owl-carousel {
+        width: 100%;
+
+        .owl-stage {
+            padding: 20px 0;
+        }
+    }
+}
+
+
+.section-heading-p {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        width: 100%;
+    }
+
+    .ti-medall {
+        position: absolute;
+        right: 0;
+        top: 14px;
+        color: $color-primary;
+        font-size: 1.8em;
+    }
+
+    h6 {
+        color: $color-primary;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    a,
+    p {
+        color: white;
+        opacity: .8;
+        font-family: Vazir-Thin;
+        font-weight: 300;
+        font-size: .9em;
+        transition: all .3s;
+        text-align: center;
+    }
+
+    a:hover {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+#net {
+    width: 100%;
+
+    #net-blocks {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 1300px) {
+            height: 450px;
+        }
+
+        @media (max-width: 1100px) {
+            height: 400px;
+        }
+
+        @media (max-width: 800px) {
+            height: 350px;
+        }
+
+        @media (max-width: 700px) {
+            height: 300px;
+        }
+
+        @media (max-width: 600px) {
+            height: 250px;
+        }
+
+        @media (max-width: 500px) {
+            display: none;
+        }
+
+        img.flip-card-front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            max-width: unset !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 5px;
+        }
+
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background: $color-primary;
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 10px;
+
+            h5 {
+                font-size: 1.1em;
+                color: black;
+
+                @media (max-width: 1000px) {
+                    font-size: 1em;
+                }
+            }
+
+            p {
+                color: black;
+                font-family: Vazir-Thin;
+
+                @media (max-width: 1000px) {
+                    font-size: .8em;
+                }
+            }
+        }
+
+        a.flip-card {
+            display: block;
+            perspective: 1000px;
+            color: black;
+
+            &:hover {
+                .flip-card-inner {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(black, .7);
+            }
+        }
+
+        #left-block {
+            width: 30%;
+            height: 100%;
+
+            #left-all-block {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        #right-block {
+            width: 69%;
+            height: 100%;
+
+            #right-top-block {
+                width: 100%;
+                height: 60%;
+            }
+
+            #right-bottom {
+                width: 100%;
+                height: 39%;
+                margin-top: 1%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .block {
+                    width: 32%;
+                    height: 100%;
+
+                    p {
+                        font-size: .9em;
+
+                        @media (max-width: 800px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+.blog-page {
+    width: 100%;
+    padding: 0 15%;
+    margin-top: 150px;
+    position: relative;
+
+    @media (max-width: 2000px) {
+        padding: 0 10%;
+    }
+
+    @media (max-width: 900px) {
+        padding: 0 3%;
+    }
+
+    @media (max-width: 800px) {
+        margin-top: 30px;
+    }
+
+    .blog-posts {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+
+.post {
+    display: inline-block;
+    position: relative;
+    width: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(black, .5);
+    margin: 20px 0;
+    background: lighten($color-background, 5);
+    transition: all .5s;
+
+    @media (max-width: 700px) {
+        width: 48%;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(black, .5);
+
+        .readmore p {
+            color: $color-primary !important;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 95%;
+        height: 50%;
+        top: 3%;
+        right: 2.5%;
+        border-left: 2px solid $color-primary;
+        border-right: 2px solid $color-primary;
+        border-top: 2px solid $color-primary;
+        border-radius: 10px 10px 0 0;
+        opacity: 1;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+
+        //box-shadow: -15px -15px 20px rgba($color-primary, .2);
+    }
+
+    .photo {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+
+        @media (max-width: 1100px) {
+            height: 150px;
+        }
+
+        img {
+            width: 100% !important;
+            min-height: 100% !important;
+            height: auto !important;
+        }
+
+        .overly {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba($color-background, .9) 20%, rgba($color-background, 0) 70%);
+        }
+    }
+
+    .detail {
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .info {
+            width: 100%;
+            color: $color-primary;
+            text-align: right;
+            direction: rtl;
+
+            p {
+                display: inline-block;
+                color: $color-primary;
+                margin: 0 7px;
+                font-size: .8em;
+                text-align: right;
+
+                @media (max-width: 1100px) {
+                    font-size: .7em;
+                }
+
+                &:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .title {
+            width: 100%;
+            text-align: right;
+
+            h4 {
+                width: 100%;
+                color: white;
+                font-size: 1.1em;
+                white-space: nowrap;
+                overflow: hidden;
+                direction: rtl;
+                text-align: right;
+
+                @media (max-width: 1100px) {
+                    font-size: 1em;
+                }
+
+                #marquee-text {
+                    display: inline-block;
+                    padding-right: 100%;
+                    animation: marquee 12s linear infinite;
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translate(0, 0);
+                    }
+
+                    100% {
+                        transform: translate(100%, 0);
+                    }
+                }
+            }
+        }
+
+        .readmore {
+            width: 100%;
+            text-align: left;
+
+            p {
+                color: white;
+                text-align: left;
+                font-size: .9em;
+                transition: all .3s;
+
+                @media (max-width: 1100px) {
+                    font-size: .8em;
+                }
+
+                i {
+                    margin-right: 5px;
+                    font-size: .7em;
+                }
+            }
+        }
+
+    }
+}

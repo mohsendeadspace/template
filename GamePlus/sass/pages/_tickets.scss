@@ -1,0 +1,371 @@
+.ticket-list-container {
+    width: 100%;
+
+
+    #ticketlist {
+        width: 100%;
+
+
+
+        .table-head {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+
+            >p {
+                width: 25%;
+                color: $color-primary;
+                text-align: right;
+            }
+
+            .order-actions {
+                display: none;
+            }
+        }
+
+
+        .table-body {
+
+            .ticket {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px !important;
+                padding: 20px 10px;
+                border-radius: 5px !important;
+                background: lighten($color-background, 5);
+                box-shadow: 0 0 10px rgba(black, .3);
+
+                >div {
+                    width: 25%;
+                    color: white;
+                    text-align: right;
+
+                    span {
+                        text-align: right;
+                    }
+
+                    a {
+                        color: $color-primary;
+                        text-align: right;
+                    }
+                }
+
+                .wpas-label-status {
+                    background: none !important;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+.ticket-container {
+    .wpas-ticket-details-header {
+        background: lighten($color-background, 5);
+        padding: 10px;
+        border-radius: 5px !important;
+        box-shadow: 0 0 10px rgba(black, .3);
+
+        thead tr {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+            th {
+                width: 25%;
+                padding: 0 !important;
+                color: $color-primary !important;
+                font-family: Vazir-Bold;
+                text-align: right !important;
+            }
+        }
+
+
+        tbody tr {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            td {
+                width: 25%;
+                color: white;
+                text-align: right !important;
+
+                a {
+                    color: $color-primary;
+                }
+            }
+
+
+        }
+    }
+
+
+
+
+
+    .tickets-history {
+        margin-top: 20px;
+
+        tbody {
+            width: 100%;
+
+            tr {
+                width: 100%;
+
+                td {
+                    display: block;
+                    width: 100%;
+                    text-align: right !important;
+                    padding: 10px !important;
+                    border-radius: 5px !important;
+                    background: lighten($color-background, 5);
+                    box-shadow: 0 0 10px rgba(black, .3);
+                    border: none !important;
+                    margin-bottom: 10px;
+
+                    .ticket-username,
+                    .ticket-time {
+                        display: inline-block;
+
+                        strong {
+                            font-family: Vazir-Bold;
+                            color: $color-primary;
+                        }
+                    }
+
+                    .ticket-time {
+                        margin-right: 10px;
+                        font-size: .9em;
+                        opacity: .8;
+                    }
+
+                    .ticket-username {
+                        color: $color-primary;
+                    }
+
+
+                    .reply-content {
+                        margin-top: 10px;
+                    }
+
+                    .wpas-reply-attachements {
+                        background: none !important;
+                        border: none !important;
+                        border-top: 1px solid lighten($color-background, 3) !important;
+                        padding: 0 !important;
+                        padding-top: 10px !important;
+
+                        strong {
+                            border: none !important;
+                            font-family: Vazir-Bold;
+                            font-size: .9em;
+                        }
+
+                        a {
+                            color: white;
+                            font-size: .9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    h3 {
+        color: $color-primary;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+
+    .wpas-wysiwyg-textarea {
+        width: 100%;
+        text-align: right !important;
+        border-radius: 5px !important;
+        background: lighten($color-background, 5);
+        box-shadow: 0 0 10px rgba(black, .3);
+        border: none !important;
+
+        .mce-panel,
+        .mce-container-body,
+        .mce-edit-area,
+        .wp-editor-container,
+        .mce-edit-area,
+        .mce-widget {
+            background: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .mce-widget button i {
+            color: white !important;
+        }
+    }
+
+
+    #wpas_files_wrapper {
+        width: 100%;
+        text-align: right !important;
+        border-radius: 5px !important;
+        background: lighten($color-background, 5);
+        box-shadow: 0 0 10px rgba(black, .3);
+        border: none !important;
+        padding: 10px;
+
+        label {
+            color: $color-primary;
+            font-size: 1.2em;
+            margin: 0 !important;
+            margin-bottom: 10px !important;
+        }
+
+        #wpas_files {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+    }
+
+    .checkbox {
+        label {
+            color: white;
+        }
+    }
+
+    button[type="submit"] {
+        width: 98%;
+        background: $color-primary;
+        box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+        color: black;
+        text-align: left;
+        margin-left: 5px;
+        border-radius: 5px;
+        padding: 6px;
+        font-size: 1em;
+        font-family: Vazir-Bold;
+        border: none !important;
+        outline: none !important;
+        text-align: center;
+    }
+}
+
+
+
+
+#create-new-ticket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6px;
+    background: $color-primary;
+    box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+    color: black;
+    text-align: left;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Vazir-Bold;
+    border: none !important;
+    outline: none !important;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wpas-submit-ticket {
+    padding: 20px 10px;
+    border-radius: 5px !important;
+    background: lighten($color-background, 5);
+    box-shadow: 0 0 10px rgba(black, .3);
+
+    .wpas-ticket-buttons-top {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+
+    input {
+        padding: 10px;
+        background: none;
+        border-radius: 5px;
+        background: $color-background;
+        color: rgb(223, 223, 223);
+        border: none !important;
+        outline: none !important;
+
+        &::placeholder {
+            opacity: 0 !important;
+        }
+    }
+
+
+
+    .wpas-submit-ticket-wysiwyg {
+        width: 100%;
+        text-align: right !important;
+        border-radius: 5px !important;
+        background: $color-background;
+        box-shadow: none !important;
+        border: none !important;
+
+        .mce-panel,
+        .mce-container-body,
+        .mce-edit-area,
+        .wp-editor-container,
+        .mce-edit-area,
+        .mce-widget {
+            background: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .mce-widget button i {
+            color: white !important;
+        }
+    }
+
+
+    #wpas_files_wrapper {
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    select {
+        background: $color-background;
+        border: none !important;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none !important;
+    }
+}

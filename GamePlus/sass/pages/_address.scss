@@ -1,0 +1,141 @@
+.adddress-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+    .address-row {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background: lighten($color-background, 5);
+        box-shadow: 0 5px 20px rgba(black, .2);
+        margin-bottom: 20px;
+
+        .address-title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lighten($color-background, 3);
+
+            h3 {
+                color: $color-primary;
+                font-size: 1em;
+            }
+
+            a {
+                color: black;
+                padding: 3px 10px;
+                border-radius: 50px;
+                background: $color-primary;
+                font-size: .8em;
+                font-family: Vazir-Bold;
+            }
+        }
+
+        address {
+            color: white;
+            font-style: normal !important;
+            font-size: .9em;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+.woocommerce-MyAccount-content {
+    width: 100% !important;
+    float: unset !important;
+}
+
+
+.woocommerce-MyAccount-navigation {
+    display: none !important;
+}
+
+.page-panel {
+    height: auto !important;
+
+    .user-content {
+        height: auto !important;
+    }
+
+
+    .address-form {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background: lighten($color-background, 5);
+        box-shadow: 0 5px 20px rgba(black, .2);
+        margin-bottom: 20px;
+
+        label {
+            font-size: .9em;
+        }
+
+        h3 {
+            color: $color-primary;
+            font-size: 1em;
+        }
+
+        input {
+            padding: 10px;
+            background: none;
+            border-radius: 5px;
+            background: $color-background;
+            color: rgb(223, 223, 223);
+
+            &::placeholder {
+                opacity: 0 !important;
+            }
+        }
+
+        #billing_address_2_field {
+            display: none !important;
+        }
+
+        .select2-container {
+            outline: none !important;
+
+            .select2-selection {
+                height: auto !important;
+                padding: 6px;
+                border-radius: 5px;
+                background: $color-background !important;
+                border: none !important;
+                color: white;
+                outline: none !important;
+
+
+                .select2-selection__rendered {
+                    // padding: 10px;
+                    color: rgb(223, 223, 223) !important;
+                }
+
+                .select2-selection__arrow {
+                    top: 10px;
+                }
+            }
+        }
+
+
+        button[type="submit"] {
+            background: $color-primary;
+            box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+            color: black;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .woocommerce-address-fields>p {
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+}

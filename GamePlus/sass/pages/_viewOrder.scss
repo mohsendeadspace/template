@@ -1,0 +1,124 @@
+#view-order-container {
+    width: 100%;
+    padding: 10px;
+    background: lighten($color-background, 5);
+    padding-right: 20px;
+
+    .view-order-heading {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid lighten($color-background, 3);
+
+        >div:first-child {
+            margin-top: 7px;
+
+            h6 {
+                display: inline-block;
+                color: $color-primary;
+                font-size: 1em;
+            }
+
+            p {
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 1em;
+                font-family: Vazir-Thin;
+
+                @media (max-width: 500px) {
+                    font-size: .9em;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        span {
+            padding: 5px;
+            background: $color-primary;
+            border-radius: 50px;
+            color: black;
+            font-weight: bold;
+            font-size: .8em;
+            box-shadow: 0 0 10px rgba($color-primary, .3);
+        }
+    }
+
+
+
+
+    .downloads-container {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+
+
+    .order-items {
+        margin-bottom: 10px !important;
+
+        .ordered-item {
+            width: 98%;
+            margin-right: 2%;
+        }
+    }
+
+    h2,
+    .woocommerce-order-details__title {
+        display: none !important;
+    }
+
+
+
+    .order_details {
+        border: 2px solid $color-background !important;
+
+        th {
+            color: $color-primary !important;
+            font-family: Vazir-Bold;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid $color-background !important;
+            color: white;
+        }
+
+        tr:last-child {
+
+            th,
+            td {
+                border: none !important;
+            }
+        }
+    }
+
+
+    .a-customer-details {
+        margin-top: 20px;
+
+        address {
+            background: $color-background;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-style: normal !important;
+        }
+    }
+
+
+    .order-again {
+        a {
+            display: block;
+            width: 100%;
+            background: $color-primary;
+            box-shadow: 0 0 10px rgba($color-primary, .3) !important;
+            color: black;
+            text-align: center;
+            border-radius: 5px !important;
+            padding: 15px !important;
+        }
+    }
+}

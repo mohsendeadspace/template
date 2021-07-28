@@ -1,0 +1,106 @@
+.shop_table {
+    width: 100%;
+    text-align: right;
+
+
+    .table-head {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 10px;
+        padding-left: 60px;
+
+        @media (max-width: 500px) {
+            padding: 0 5px;
+            padding-left: 5px;
+            justify-content: space-between;
+        }
+
+        >p {
+            width: 25%;
+            color: $color-primary;
+
+            @media (max-width: 1000px) {
+                font-size: .9em;
+            }
+
+            &:first-child {
+                @media (max-width: 1000px) {
+                    width: 15%;
+                }
+            }
+        }
+
+        .order-total {
+            @media (max-width: 500px) {
+                display: none;
+            }
+        }
+
+        .order-actions {
+            display: none;
+        }
+    }
+
+
+    .table-body {
+
+        .order {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px !important;
+            padding: 20px 10px;
+            padding-left: 60px;
+            border-radius: 5px !important;
+            background: lighten($color-background, 5);
+            box-shadow: 0 0 10px rgba(black, .3);
+
+            @media (max-width: 500px) {
+                padding: 15px 5px;
+                padding-left: 5px;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            >div {
+                width: 25%;
+                color: white;
+                word-wrap: break-word;
+
+                &:first-child {
+                    @media (max-width: 1000px) {
+                        width: 15%;
+                    }
+                }
+
+                @media (max-width: 1000px) {
+                    font-size: .9em;
+                }
+
+                a {
+                    color: $color-primary;
+                }
+            }
+
+            .order-total {
+                @media (max-width: 500px) {
+                    margin-top: 10px;
+                    width: 100% !important;
+                }
+            }
+
+            .order-actions {
+                width: auto !important;
+                position: absolute;
+                left: 10px;
+
+                @media (max-width: 500px) {
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+}

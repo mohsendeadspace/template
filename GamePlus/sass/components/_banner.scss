@@ -1,0 +1,225 @@
+.banner {
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        opacity: 1;
+        overflow: hidden;
+
+        &>padd {
+            top: 20%;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 568px;
+            filter: blur(4px);
+        }
+
+        .overly {
+            position: absolute;
+            width: 100%;
+            height: 105%;
+            top: -2.5%;
+            right: 0;
+            background: linear-gradient(to bottom, rgba($color-background, 1) 10%, rgba($color-background, .5));
+        }
+    }
+
+
+    .items {
+        width: 70%;
+        margin-right: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media (max-width: 2000px) {
+            width: 80%;
+            margin-right: 10%;
+        }
+
+        @media (max-width: 900px) {
+            width: 94%;
+            margin-right: 3%;
+        }
+
+        .png {
+            position: relative;
+            height: 400px;
+
+            @media (max-width: 1300px) {
+                height: 350px;
+            }
+
+            @media (max-width: 700px) {
+                height: 300px;
+            }
+
+            @media (max-width: 500px) {
+                height: 200px;
+            }
+        }
+
+        .product,
+        .product * {
+            z-index: 2;
+
+            &:hover {
+                transform: translateY(0);
+                box-shadow: 0 10px 30px rgba(black, .5);
+
+                .anim-obj {
+                    bottom: 110%;
+                }
+            }
+        }
+
+        .texts {
+            position: relative;
+            width: 50%;
+            z-index: 2;
+
+            .title-per {
+                font-size: 2.2em;
+                color: $color-primary;
+                animation: tShadow 2s infinite;
+
+                @media (max-width: 1300px) {
+                    font-size: 2em;
+                }
+
+                @media (max-width: 700px) {
+                    font-size: 1.8em;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 1.5em;
+                }
+
+                @keyframes tShadow {
+                    0% {
+                        text-shadow: 0 0 0 rgba($color-primary, .5);
+                    }
+
+                    50% {
+                        text-shadow: 0 0 10px rgba($color-primary, .5);
+                    }
+
+                    100% {
+                        text-shadow: 0 0 0 rgba($color-primary, .5);
+                    }
+                }
+            }
+
+            .title-en {
+                font-size: 1.5em;
+                color: white;
+                font-family: Vazir;
+                font-weight: 300;
+
+                @media (max-width: 1300px) {
+                    font-size: 1.3em;
+                }
+
+                @media (max-width: 700px) {
+                    font-size: 1em;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: .8em;
+                }
+            }
+
+
+            .description {
+                margin-top: 20px;
+                position: relative;
+                font-size: 1.1em;
+                color: white;
+                z-index: 2;
+
+                @media (max-width: 1300px) {
+                    font-size: 1em;
+                }
+
+                @media (max-width: 700px) {
+                    font-size: .9em;
+                }
+
+                @media (max-width: 500px) {
+                    display: none;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 25%;
+                    height: 2px;
+                    background: $color-primary;
+                    top: 120%;
+                    right: 0;
+                    border-radius: 50px;
+                    animation: bPlay 3s infinite;
+                }
+
+                @keyframes bPlay {
+                    0% {
+                        width: 25%;
+                    }
+
+                    50% {
+                        width: 40%;
+                    }
+
+                    100% {
+                        width: 25%;
+                    }
+                }
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 30px;
+                padding: 3px 20px;
+                color: $color-primary;
+                border: 1px solid $color-primary;
+                border-radius: 50px;
+                transition: all .3s;
+
+                @media (max-width: 700px) {
+                    font-size: .9em;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: .7em;
+                }
+
+                &:hover {
+                    color: black;
+                    background: $color-primary;
+                }
+            }
+        }
+    }
+
+    >.overly {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba($color-background, 1), rgba($color-background, 0));
+
+        &>padd {
+            bottom: 0 !important;
+        }
+    }
+}

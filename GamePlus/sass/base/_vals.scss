@@ -1,0 +1,57 @@
+$color-primary: rgb(254, 231, 21);
+$color-primary-light:rgb(187, 242, 255);
+$color-background: rgb(16, 24, 32);
+$color-sidebar-nav: #12172a;
+$color-panels: #0c0f1b;
+
+$shadow-black-light: 0px 5px 20px 0px rgba(black, .1);
+$shadow-black-dark: 0px 5px 20px 0px rgba(black, .2);
+
+@font-face {
+    font-family: 'Vazir';
+    src: url("fonts/Vazir-FD.eot");
+    src: url("fonts/Vazir-FD.eot?") format("embedded-opentype"), url("fonts/Vazir-FD.woff2") format("woff2"), url("fonts/Vazir-FD.woff") format("woff"), url("fonts/Vazir-FD.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url("fonts/Vazir-Bold-FD.eot");
+    src: url("fonts/Vazir-Bold-FD.eot") format("embedded-opentype"), url("fonts/Vazir-Bold-FD.woff2") format("woff2"), url("fonts/Vazir-Bold-FD.woff") format("woff"), url("fonts/Vazir-Bold-FD.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Vazir-Light';
+    src: url("fonts/Vazir-Light-FD.eot");
+    src: url("fonts/Vazir-Light-FD.eot") format("embedded-opentype"), url("fonts/Vazir-Light-FD.woff2") format("woff2"), url("fonts/Vazir-Light-FD.woff") format("woff"), url("fonts/Vazir-Light-FD.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Vazir-Black';
+    src: url("fonts/Vazir-Black-FD.eot");
+    src: url("fonts/Vazir-Black-FD.eot") format("embedded-opentype"), url("fonts/Vazir-Black-FD.woff2") format("woff2"), url("fonts/Vazir-Black-FD.woff") format("woff"), url("fonts/Vazir-Black-FD.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Vazir-Thin';
+    src: url("fonts/Vazir-Thin-FD.eot");
+    src: url("fonts/Vazir-Thin-FD.eot") format("embedded-opentype"), url("fonts/Vazir-Thin-FD.woff2") format("woff2"), url("fonts/Vazir-Thin-FD.woff") format("woff"), url("fonts/Vazir-Thin-FD.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'En';
+    src: url("fonts/bahnschrift.ttf");
+}
+
+
+
+
+@keyframes show_fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

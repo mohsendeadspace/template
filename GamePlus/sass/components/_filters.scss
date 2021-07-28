@@ -1,0 +1,141 @@
+#filters {
+    position: relative;
+    width: 100%;
+    margin-top: 150px;
+    z-index: 2;
+    background: rgba(black, .5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    padding-top: 10px;
+    z-index: 3;
+
+
+    #left-filters {
+        margin-bottom: 10px;
+
+        .count {
+            font-size: .9em;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+
+
+    form {
+        margin: 0 !important;
+    }
+
+    .game-plus-filters {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .filters-title {
+            position: relative;
+            font-size: 1.2em;
+            color: $color-primary;
+            padding-right: 35px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                bottom: 45%;
+                right: 0;
+                background: $color-primary;
+                border-radius: 50%;
+                box-shadow: 0 0 10px $color-primary;
+            }
+        }
+
+        .wpf_item {
+            position: unset !important;
+            padding: 0 !important;
+            margin: 0 20px;
+        }
+
+        label {
+            position: relative;
+            color: white;
+            margin: 0 !important;
+            font-family: Vazir;
+            font-weight: normal !important;
+            font-size: 1.1em;
+            padding-left: 30px;
+            cursor: pointer;
+
+            &.open {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 6px;
+                font-size: .9em !important;
+                opacity: .7;
+                transition: all .5s;
+            }
+        }
+
+        ul {
+
+            li {
+                margin: 0 !important;
+                margin-left: 10px !important;
+
+                label {
+                    color: rgb(201, 201, 201);
+                    font-size: .9em;
+                }
+
+                input {
+                    color: white;
+                    border-radius: 5px;
+                    background: $color-background;
+                    border: none;
+                }
+            }
+        }
+
+        .bg {
+            display: none;
+            position: absolute !important;
+            top: 100%;
+            width: 78%;
+            min-height: 43px;
+            right: 0;
+            background: rgba(black, .5);
+            padding: 5px !important;
+            border-radius: 5px;
+            margin-top: 10px;
+
+            .ui-slider {
+                width: 90%;
+                margin: 0 !important;
+                margin-top: 16px !important;
+                margin-right: 2% !important;
+            }
+
+            .ui-slider-range {
+                background: $color-primary !important;
+            }
+
+            .ui-slider-handle {
+                top: -3px !important;
+                background: $color-primary !important;
+                border: none !important;
+
+                span {
+                    color: $color-primary !important;
+                }
+            }
+        }
+    }
+}

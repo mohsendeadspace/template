@@ -1,0 +1,352 @@
+.page-heading {
+    position: relative;
+
+    h1,
+    h6:first-child {
+        color: $color-primary;
+        word-spacing: -4px;
+        font-size: 4em;
+        text-shadow: 0 0 10px rgba($color-primary, .5);
+        font-family: Vazir-Black;
+        text-align: center;
+
+        @media (max-width: 800px) {
+            font-size: 3em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2.5em;
+        }
+    }
+
+    h6,
+    h6.per {
+        color: white;
+        font-family: Vazir;
+        font-size: 1.3em;
+        word-spacing: 10px;
+        text-align: center;
+        font-weight: normal;
+
+        @media (max-width: 800px) {
+            font-size: 1em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: .9em;
+        }
+    }
+
+    h6.per {
+        font-family: Vazir !important;
+        word-spacing: 5px !important;
+        font-size: 1.1em !important;
+
+        @media (max-width: 800px) {
+            font-size: .9em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: .8em;
+        }
+    }
+
+}
+
+
+
+
+
+#fixed-search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(black, .7);
+    z-index: 30;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    form {
+        width: 100%;
+
+        input {
+            display: block;
+            width: 90%;
+            margin-right: 5%;
+            background: transparent;
+            font-size: 1.5em;
+            text-align: center;
+            color: white !important;
+            border: none;
+            outline: none;
+        }
+    }
+
+    #live_search_result {
+        display: none;
+        width: 90%;
+        margin-top: 20px;
+        height: 200px;
+        padding: 5px;
+        background: rgba(black, .3);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        -ms-overflow-style: none;
+        overflow-y: scroll;
+
+        &.show {
+            display: block !important;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        #result-list {
+            width: 100%;
+            height: 100%;
+
+
+            .live-items a {
+                width: 100%;
+                padding: 5px;
+                border-bottom: 1px solid #777;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    margin-left: 10px;
+                    border-radius: 3px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .aj_signer {
+                    font-size: .8em;
+                    font-family: Vazir-Thin;
+                    color: white;
+                }
+
+                .aj_title {
+                    margin-bottom: -5px;
+                    font-size: .9em;
+                    font-family: Vazir-Bold;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.woocommerce button.button.loading::after {
+    content: "";
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $color-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+
+    img {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: .05;
+        filter: grayscale(1);
+    }
+
+}
+
+
+.page-loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 75px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loader-17 .css-square {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 7px;
+    background: $color-primary;
+    -webkit-box-shadow: 2px 2px 3px 0px black;
+    box-shadow: 2px 2px 3px 0px black;
+}
+
+
+.loader-17 .square1 {
+    left: 70px;
+    -webkit-animation: dominos 1s 0.125s ease infinite;
+    animation: dominos 1s 0.125s ease infinite;
+}
+
+.loader-17 .square2 {
+    left: 60px;
+    -webkit-animation: dominos 1s 0.3s ease infinite;
+    animation: dominos 1s 0.3s ease infinite;
+}
+
+.loader-17 .square3 {
+    left: 50px;
+    -webkit-animation: dominos 1s 0.425s ease infinite;
+    animation: dominos 1s 0.425s ease infinite;
+}
+
+.loader-17 .square4 {
+    left: 40px;
+    -webkit-animation: dominos 1s 0.540s ease infinite;
+    animation: dominos 1s 0.540s ease infinite;
+}
+
+.loader-17 .square5 {
+    left: 30px;
+    -webkit-animation: dominos 1s 0.665s ease infinite;
+    animation: dominos 1s 0.665s ease infinite;
+}
+
+.loader-17 .square6 {
+    left: 20px;
+    -webkit-animation: dominos 1s 0.79s ease infinite;
+    animation: dominos 1s 0.79s ease infinite;
+}
+
+.loader-17 .square7 {
+    left: 10px;
+    -webkit-animation: dominos 1s 0.9s ease infinite;
+    animation: dominos 1s 0.9s ease infinite;
+}
+
+.loader-17 .square8 {
+    left: 0px;
+    -webkit-animation: dominos 1s 1s ease infinite;
+    animation: dominos 1s 1s ease infinite;
+}
+
+
+@-webkit-keyframes dominos {
+    50% {
+        opacity: 0.7;
+    }
+
+    75% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes dominos {
+    50% {
+        opacity: 0.7;
+    }
+
+    75% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main404 {
+    min-height: unset !important;
+
+    @media (max-width:900px) {
+        .background-container {
+            display: none !important;
+        }
+    }
+}
+
+#p404 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 180px;
+    padding-bottom: 80px;
+
+    @media (max-width:800px) {
+        margin-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 10em;
+        font-family: Vazir;
+        color: $color-primary;
+        text-shadow: 0 0 30px rgba($color-primary, .5);
+
+        @media (max-width:1200px) {
+            font-size: 8em;
+        }
+
+        @media (max-width:500px) {
+            font-size: 6em;
+        }
+    }
+
+    p {
+        font-size: 1.5em;
+
+        @media (max-width:1200px) {
+            font-size: 1.3em;
+        }
+
+        @media (max-width:500px) {
+            font-size: 1.1em;
+        }
+    }
+}

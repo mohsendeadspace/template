@@ -1,0 +1,22 @@
+.search-container {
+    margin-top: 160px;
+    width: 100%;
+    padding: 0 15%;
+    min-height: 600px;
+
+    @media (max-width: 2000px) {
+        padding: 0 10%;
+    }
+
+    @media (max-width: 900px) {
+        padding: 0 3%;
+    }
+
+    #product-list {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

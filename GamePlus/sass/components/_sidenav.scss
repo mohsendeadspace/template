@@ -1,0 +1,80 @@
+#sidenav {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    right: 0;
+    right: -210px;
+    background: lighten($color-background, 5);
+    z-index: 20;
+    padding: 30px 20px;
+    transition: all .7s ease-out;
+
+
+    &.show {
+        right: 0;
+    }
+
+
+    #shop-name {
+        padding-bottom: 10px;
+        border-bottom: 1px solid lighten($color-background, 2);
+
+        a {
+            color: $color-primary;
+            font-family: Vazir-Bold;
+            font-size: 1.1em;
+        }
+    }
+
+    #base-list {
+        padding: 5px 0;
+        border-bottom: 1px solid lighten($color-background, 2);
+
+        ul {
+            li {
+                margin: 10px 0;
+
+                a {
+                    color: white;
+                    font-size: .9em;
+                    font-family: Vazir-Thin;
+                }
+            }
+        }
+    }
+
+
+    #other-list {
+        padding: 5px 0;
+
+        ul {
+            li {
+                margin: 10px 0;
+
+                a {
+                    color: $color-primary;
+                    font-size: .9em;
+                    font-family: Vazir-Thin;
+
+                    i {
+						margin-left: 5px;
+						color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#black-screen {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(black, .5);
+    z-index: 19;
+}

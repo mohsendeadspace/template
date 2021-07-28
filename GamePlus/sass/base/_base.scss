@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Vazir;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Vazir-Bold;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    margin: 0 !important;
+    // cursor: url("images/cursor.svg"), auto;
+}
+
+#app {
+    width: 100%;
+    background: $color-background;
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+}
+
+main:not(.woo-main):not(.woo-main-page) {
+	min-height: 500px;
+	
+	@media (max-width: 800px) {
+		margin-top: 90px;
+	}
+}
+
+.owl-carousel {
+    text-align: right;
+    direction: ltr;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: darken($color-background, 2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-primary;
+}
+
+.goToUp {
+	position: fixed;
+	left: 20px;
+	width: 35px;
+	height: 35px;
+	bottom: 20px;
+	border-radius: 50%;
+	background: $color-primary;
+	z-index: 10;
+	box-shadow: 0 0 10px rgba(black,.2);
+	opacity: 0;
+	transition: all .3s;
+
+	i {
+		color: black;
+		font-weight: 900;
+	}
+
+	&.show {
+		opacity: 1;
+	}
+}

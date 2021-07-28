@@ -1,0 +1,322 @@
+#login-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .woocommerce-notices-wrapper {
+        position: absolute;
+        top: 10px;
+    }
+
+    .background-l-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .slide-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1) blur(3px);
+            opacity: .3;
+            background: url('images/cyberpunk.jpg') center no-repeat;
+            background-size: cover;
+        }
+
+        .overly {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: $color-background;
+            opacity: .5;
+        }
+    }
+
+
+    #customer_login {
+        position: relative;
+        width: 70%;
+        background: $color-background;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(black, .5);
+        overflow: hidden;
+        z-index: 4;
+
+        @media (max-width: 1200px) {
+            width: 90%;
+        }
+
+        .login-container,
+        .signin-container {
+            width: 100%;
+            display: none;
+            animation: show forwards 1s;
+            padding-right: 60%;
+
+            @media (max-width: 900px) {
+                padding-right: 0;
+            }
+
+            &.active {
+                display: block;
+            }
+
+            @keyframes show {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .photo {
+                position: absolute;
+                height: 100%;
+                width: 60%;
+                top: 0;
+                right: 0;
+                background: $color-primary;
+
+                @media (max-width: 900px) {
+                    display: none;
+                }
+
+                .bg {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    background: url('images/cyberpunk.jpg') center no-repeat;
+                    background-size: cover;
+                }
+
+                .detail {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    background: rgba(black, .7);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    h2 {
+                        color: $color-primary;
+                        font-size: 2.5em;
+                        font-family: Vazir-Black;
+                        text-shadow: 0 0 10px rgba($color-primary, .5);
+                    }
+                }
+            }
+
+
+            .content {
+                position: relative;
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                form {
+                    width: 100%;
+
+                    >p {
+                        width: 100%;
+                    }
+                }
+
+
+                img {
+                    width: 100px;
+                    width: 100px;
+                }
+
+
+                input[type="text"],
+                input[type="text"]::placeholder,
+                input[type="text"]:active,
+                input[type="text"]:focus,
+                input[type="text"]:enabled,
+                input[type="text"]:indeterminate,
+                input[type="text"]:checked,
+                input[type="text"]:default,
+                input[type="text"]:valid {
+                    background: lighten($color-background, 5) !important;
+                    border: none;
+                    outline: none;
+                }
+
+                input[type="password"],
+                input[type="password"]::placeholder,
+                input[type="password"]:active,
+                input[type="password"]:focus,
+                input[type="password"]:enabled,
+                input[type="password"]:indeterminate,
+                input[type="password"]:checked,
+                input[type="password"]:default,
+                input[type="password"]:valid {
+                    background: lighten($color-background, 5) !important;
+                    border: none;
+                    outline: none;
+                }
+
+                input[type="email"],
+                input[type="email"]::placeholder,
+                input[type="email"]:active,
+                input[type="email"]:focus,
+                input[type="email"]:enabled,
+                input[type="email"]:indeterminate,
+                input[type="email"]:checked,
+                input[type="email"]:default,
+                input[type="email"]:valid {
+                    background: lighten($color-background, 5) !important;
+                    border: none;
+                    outline: none;
+                }
+
+                input[type="text"],
+                input[type="password"],
+                input[type="email"] {
+                    margin-top: 10px;
+                    width: 100%;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+
+                label {
+                    margin-top: 10px;
+                    width: 100%;
+                    color: white;
+                    text-align: center;
+                }
+
+                button[type="submit"] {
+                    width: 100%;
+                    padding: 6px 10px;
+                    background: $color-primary;
+                    box-shadow: 0 0 10px rgba($color-primary, .5);
+                    border-radius: 5px;
+                    font-size: 1.1em;
+                    font-family: Vazir-Bold;
+                    margin-top: 20px;
+                    color: black;
+                }
+
+
+                .two-part {
+                    margin-top: 20px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .rounded-button {
+                    width: 49%;
+                    position: relative;
+                    color: white;
+                    font-family: Vazir-Thin;
+                    display: inline-block;
+                    background: none;
+                    padding: 6px 10px;
+                    border: 1px solid lighten($color-background, 5);
+                    border-radius: 50px;
+                    font-size: .8em;
+                    transition: all .3s;
+                    cursor: pointer;
+                    margin: 0;
+                    text-align: right;
+
+                    i {
+                        position: absolute;
+                        left: 4px;
+                        top: 3px;
+                        background: lighten($color-background, 5);
+                        color: $color-background;
+                        border-radius: 50%;
+                        padding: 7px;
+                        transition: all .3s;
+                    }
+                }
+
+                input[type="checkbox"] {
+                    opacity: 0;
+                    position: fixed;
+                    width: 0;
+                }
+
+                .rounded-button:hover {
+                    border-color: white;
+
+                    i {
+                        background: white;
+                    }
+                }
+
+                input[type="checkbox"]:checked+#for-rememberme {
+                    border-color: $color-primary;
+
+                    i {
+                        background: $color-primary;
+                        color: black;
+                    }
+                }
+
+                .lost_password a {
+                    display: block;
+                    font-size: .8em;
+                    margin-top: 15px;
+                    color: rgb(201, 201, 201);
+                    font-family: Vazir-Thin;
+                }
+            }
+        }
+    }
+}
+
+
+.signin-container {
+    padding-right: 0 !important;
+    padding-left: 60% !important;
+
+    @media (max-width: 900px) {
+        padding-left: 0 !important;
+    }
+
+    .photo {
+        right: unset !important;
+        left: 0;
+
+
+        .bg {
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: cover;
+        }
+    }
+
+    .rounded-button {
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    .woocommerce-privacy-policy-text {
+        display: none !important;
+    }
+}

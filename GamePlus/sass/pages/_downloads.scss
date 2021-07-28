@@ -1,0 +1,98 @@
+.downloads-table {
+    width: 100%;
+    text-align: right;
+
+
+    .table-head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+
+        >p {
+            width: 25%;
+            color: $color-primary;
+
+            @media (max-width: 600px) {
+                font-size: .8em;
+            }
+        }
+
+        .download-remaining {
+            width: 35%;
+        }
+
+        .download-expires {
+            width: 15%;
+        }
+
+        .order-actions {
+            display: none;
+        }
+
+        .download-file {
+            @media (max-width: 600px) {
+                width: 15%;
+            }
+        }
+    }
+
+
+    .table-body {
+
+        .downloads {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px !important;
+            padding: 20px 10px;
+            border-radius: 5px !important;
+            background: lighten($color-background, 5);
+            box-shadow: 0 0 10px rgba(black, .3);
+
+            >div {
+                width: 25%;
+                color: white;
+
+                @media (max-width: 600px) {
+                    font-size: .8em;
+                }
+
+                a {
+                    color: $color-primary;
+                }
+            }
+
+            div:nth-child(2) {
+                width: 35%;
+            }
+
+            div:nth-child(3) {
+                width: 15%;
+            }
+
+            div:last-child {
+                @media (max-width: 600px) {
+                    width: 15%;
+                }
+            }
+
+            .order-actions {
+                width: auto !important;
+                position: absolute;
+                left: 10px;
+            }
+        }
+    }
+}
+
+.notfound {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px !important;
+    background: lighten($color-background, 5);
+    box-shadow: 0 0 10px rgba(black, .3);
+    text-align: center;
+}

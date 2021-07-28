@@ -1,0 +1,130 @@
+.no-max-height {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.my-games {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 2%;
+    height: auto !important;
+    overflow-y: scroll;
+
+    .purchased-game {
+        width: 48%;
+        padding: 10px;
+        padding-bottom: 5px;
+        padding-left: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(black, .2);
+        background: lighten($color-background, 5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            padding-left: 10px;
+        }
+
+        .product-thumbnail {
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            margin-left: 20px;
+
+            @media (max-width: 500px) {
+                padding-left: 0;
+            }
+
+            .line {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 97%;
+                background: $color-primary;
+                border-radius: 20px;
+                box-shadow: 0 5px 20px rgba($color-primary, .5);
+
+                @media (max-width: 400px) {
+                    display: none;
+                }
+            }
+
+            img {
+                width: 150px !important;
+                height: 150px !important;
+                max-width: none !important;
+                margin-right: -30px;
+                border-radius: 10px 0 10px 10px;
+                box-shadow: 0 5px 20px rgba(black, .5);
+
+                @media (max-width: 900px) {
+                    width: 120px !important;
+                    height: 120px !important;
+                }
+
+                @media (max-width: 500px) {
+                    width: 100px !important;
+                    height: 100px !important;
+                }
+            }
+
+        }
+
+        .product-detail {
+
+            >h4 {
+                display: block;
+                width: 100%;
+                color: $color-primary;
+                
+                font-size: 1.2em;
+                text-align: left;
+                font-weight: normal;
+
+                @media (max-width: 900px) {
+                    font-size: 1em;
+                }
+            }
+
+
+            .product-username,
+            .product-password {
+                margin-top: 10px;
+                font-size: .9em;
+                text-align: left;
+                padding: 5px;
+                border-radius: 5px;
+                background: $color-background;
+
+                @media (max-width: 900px) {
+                    font-size: .8em;
+                }
+
+                i {
+                    color: $color-primary;
+                    margin-right: 5px;
+                }
+
+                span {
+                    font-family: Vazir-Thin;
+                    text-align: left;
+                    word-wrap: break-word;
+
+                    a {
+                        color: white;
+                        font-family: Vazir-Thin;
+                    }
+                }
+            }
+        }
+    }
+}
